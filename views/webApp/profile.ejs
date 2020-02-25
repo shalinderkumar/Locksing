@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>LockSign</title>
+		<meta name=viewport content="width=device-width, initial-scale=1, user-scalable=no">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+
+		<link rel="shortcut icon" type="image/ico" href="images/favicon.png" />
+		<!-- css -->
+		<link rel="stylesheet" href="css/icon.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/font-signature.css">		
+		<link rel="stylesheet" type="text/css" href="css/dashboard.css">
+		<!-- jquery script -->
+	    <script src="js/jquery-3.3.1.min.js"></script>
+	</head>
+	<body>	
+		<div class="wrapper">
+			<div class="left-panel scroll_custom">
+				<div class="image-panel">
+					<div class="close-icon">
+						<a href="javascript:;"><img src="images/cross1.svg"></a>
+					</div>
+					<a href="profile.html">
+						<div class="image-box">
+							<img src="images/thumbnail.png">
+						</div>
+						<p>John Appleased</p>
+					</a>
+				</div>
+				<div class="navbar">
+					<ul>
+						<li>
+							<a href="javascript:;" class="title">
+								<div class="nav-icon home"></div>
+								<div class="nav-title">Home <i class="icon ion-chevron-down"></i></div>	
+							</a>
+							<div class="drop-wrap">
+								<ul>
+									<li><a href="dashboard.html">Recent</a></li>
+									<li><a href="important.html">Important</a></li>
+									<li><a href="offline.html">Offline</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="javascript:;" class="title">
+								<div class="nav-icon document" class="title"></div>
+								<div class="nav-title">Documents <i class="icon ion-chevron-down"></i></div>
+							</a>
+							<div class="drop-wrap">
+								<ul>
+									<li><a href="signature.html">Needs for Signature</a></li>
+									<li><a href="waiting-others.html">Waiting for others</a></li>
+									<li><a href="completed.html">Completed</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="current"><a href="profile.html">
+								<div class="nav-icon account"></div>
+								<div class="nav-title">My Account</div>
+							</a>
+						</li>
+						<li ><a href="settings.html">
+								<div class="nav-icon setting"></div>
+								<div class="nav-title">Settings</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="foot">
+					<div class="logo">
+						<a href="javascript:;">
+							<img src="images/logo.png" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="right-panel profile">
+				<div class="header">
+					<div class="left-section">
+						<div class="nav-toggle">
+		                    <a id="menu_toggle" class="">
+		                        <i class="icon bars"></i>
+		                        <i class="icon bars"></i>
+		                        <i class="icon bars"></i>
+		                    </a>
+		                </div>
+						<div class="page-title">
+							<img src="images/user-pic.png"> Profile
+						</div>
+					</div>
+					<div class="right-section">						
+						<div class="common-section">
+							<a href="help_old.html" class="custom-tooltip" data-name="Help"><img src="images/help.png" alt=""></a>
+						</div>
+						<div class="common-section">
+							<a href="login.html" class="custom-tooltip" data-name="Logout"><img src="images/logout.png" alt=""></a>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="main_section">
+					<div id="tabs" class="tabs">
+					  	<ul>
+						    <li class="active"><a href="#personal-info"><svg viewBox="0 0 437.6 437.6"><use  xlink:href="#information-icon" /></svg> Personal Info</a></li>
+						    <li><a href="#signature"><svg viewBox="0 0 16 14.997"><use  xlink:href="#signature-icon" /></svg>Signature</a></li>
+						    <li><a href="#initials"><svg viewBox="0 0 512 315.734"><use  xlink:href="#initials-icon" /></svg>Initials</a></li>
+						    <li><a href="#upgrade"><svg viewBox="0 0 512 512"><use  xlink:href="#upgrade-icon" /></svg>Upgrade</a></li>
+						    <li><a href="#payment"><svg viewBox="0 0 95 65.9"><use  xlink:href="#payment-icon" /></svg>Payments</a></li>
+					  	</ul>
+					  	<div class="tabs-all">
+						  <div id="personal-info">
+							<div class="form-section">
+							  	<div class="form-box">
+							  		<div class="title"><h3>Name</h3></div>
+							  		<div class="form">
+							  			<div class="form-element">
+							  				<input type="text" placeholder="Full name">
+							  			</div>
+							  			<div class="form-element">
+							  				<input type="text" placeholder="First name">
+							  			</div>
+							  			<div class="form-element">
+							  				<input type="text" placeholder="Middle name">
+							  			</div>
+							  			<div class="form-element">
+							  				<input type="text" placeholder="Last name">
+							  			</div>
+							  		</div>
+							  	</div>
+							  	<div class="form-box">
+							  		<div class="title"><h3>Contact Info</h3></div>
+							  		<div class="form">
+							  			<div class="form-element">
+							  				<input type="email" placeholder="Email Address">
+							  			</div>
+							  			<div class="form-element">
+							  				<input type="text" placeholder="Mobile Number" onkeypress="return isNumberKey(event)">
+							  			</div>
+							  			<div class="form-element">
+							  				<input type="text" placeholder="Office Number" onkeypress="return isNumberKey(event)">
+							  			</div>
+							  		</div>
+							  	</div>
+							  	<div class="form-box">
+							  		<div class="title"><h3>Dates</h3></div>
+							  		<div class="form">
+							  			<div class="form-element custom">
+							  				<label>Current date</label>
+							  				<input type="email" placeholder="DD/MM/YY" readonly class="datepicker">
+							  				<img src="images/calander.png" alt="">
+							  			</div>
+							  			<div class="form-element custom">
+							  				<label>Date of birth</label>
+							  				<input type="text" placeholder="DD/MM/YY" readonly class="datepicker">
+							  				<img src="images/calander.png" alt="">
+							  			</div>							  			
+							  		</div>
+							  	</div>
+							  	<div class="form-box">
+							  		<div class="title"><h3>Address</h3></div>
+							  		<div class="form">
+							  			<div class="form-element">
+							  				<input type="text" placeholder="House/Flat number">
+							  			</div>
+							  			<div class="form-element">
+							  				<input type="text" placeholder="Locality">
+							  			</div>
+							  			<div class="form-element">
+							  				<input type="text" placeholder="Pincode">
+							  			</div>
+							  			<div class="form-element">
+							  				<input type="text" placeholder="City">
+							  			</div>
+							  			<div class="form-element">
+							  				<input type="text" placeholder="State">
+							  			</div>
+							  			<div class="form-element">
+							  				<input type="text" placeholder="Country">
+							  			</div>
+							  			<div class="submit-wrap">
+							  				<a class="common-btn" href="javascript:;">Save</a>
+							  			</div>
+							  		</div>
+							  	</div>
+							</div>
+						  </div>
+						  <div id="signature">
+						  	<div class="signature-box">
+					  			<div class="sign-box">
+					  				<p>John Appleased</p>
+					  				<a href="javascript:;" onclick="common_popup('.delete')"><img src="images/bin.png"></a>
+					  			</div>
+					  			
+						  		<div class="add-signature">
+						  			<a href="javascript:;" onclick="common_popup('.signature-add')"><i class="icon ion-plus-round"></i>Add new sign</a>
+						  		</div>
+						  	</div>						    
+						  </div>
+						  <div id="initials">
+						  	<div class="signature-box">
+					  			<div class="sign-box">
+					  				<p>John Appleased</p>
+					  				<a href="javascript:;" onclick="common_popup('.delete')"><img src="images/bin.png"></a>
+					  			</div>
+					  			
+						  		<div class="add-signature">
+						  			<a href="javascript:;" onclick="common_popup('.signature-add')"><i class="icon ion-plus-round"></i>Add new Initials</a>
+						  		</div>
+						  	</div>						    
+						  </div>
+						  <div id="upgrade">
+						  	<div class="title"><h3>Beta Premium</h3></div>						    
+						  	<div class="upgrade-box">
+						  		<div class="brief-into">
+						  			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt </p>
+						  			<ul>
+						  				<li><i class="icon ion-checkmark"></i>Unlimited Number of Documents</li>
+						  				<li><i class="icon ion-checkmark"></i>Malesuada nunc vel</li>
+						  				<li><i class="icon ion-checkmark"></i>sed do eiusmod</li>
+						  			</ul>
+						  		</div>
+						  		<div class="upgrade-payment">
+						  			<svg viewBox="0 0 512 512"><use  xlink:href="#upgrade-icon" /></svg>
+						  			<p>&dollar; 19.99 <span>/ user / yr</span></p>
+						  		</div>
+						  		<div class="upgrade-pay">
+						  			<div class="form">
+						  				<div class="form-element">
+						  					<input type="text" placeholder="Card Number" class="card-number">
+						  					<input type="text" placeholder="MM/YY">
+						  					<input type="text" placeholder="CVV">
+						  				</div>
+						  				<div class="submit-wrap">
+						  					<a href="javascript:;" class="common-btn">Get it Now !</a>
+						  					<div class="clear"></div>
+						  				</div>
+						  			</div>
+						  		</div>
+
+						  	</div>
+						  </div>
+						  <div id="payment">
+						  	<div class="sub-header">
+								<div class="left-section">
+									<div class="title"><h3>Payment History</h3></div>
+								</div>
+								<div class="right-section">
+									<div class="common-section calender">
+										<a href="javascript:;" class="custom-tooltip datepicker" data-name="Calendar"><img src="images/calander.png" alt=""></a>
+										<div id="datepicker"></div>
+									</div>
+								</div>
+								<div class="clear"></div>
+							</div>
+							<div class="table-wrapper">
+								<table class="table">
+									<thead>
+										<tr>
+											<th>Method</th>
+											<th>Amount</th>
+											<th>Date</th>
+											<th style="width:40px"></th>
+										</tr>
+									</thead>
+									<tbody>											
+										<tr>
+											<td><a href="javascript:;"><img src="images/card.png">xxxx-xxxx-xxxx-4444</a></td>
+											<td><a href="javascript:;">&dollar;19.99</a></td>
+											<td><a href="javascript:;">28 April, 2019</a></td>
+											<td class="action"><a href="javascript:;"><span class="icon ion-more"></span></a>
+												<div class="action-data">
+													<ul>
+														<li><a href="javascript:;">View</a></li>
+														<li><a href="javascript:;">Download</a></li>
+														<li><a href="javascript:;">Delete</a></li>
+														<li><a href="javascript:;" onclick="common_popup('.move-folder')">Move to folder</a></li>
+													</ul>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td><a href="javascript:;"><img src="images/card.png">xxxx-xxxx-xxxx-4444</a></td>
+											<td><a href="javascript:;">&dollar;19.99</a></td>
+											<td><a href="javascript:;">28 April, 2019</a></td>
+											<td class="action"><a href="javascript:;"><span class="icon ion-more"></span></a>
+												<div class="action-data">
+													<ul>
+														<li><a href="javascript:;">View</a></li>
+														<li><a href="javascript:;">Download</a></li>
+														<li><a href="javascript:;">Delete</a></li>
+														<li><a href="javascript:;" onclick="common_popup('.move-folder')">Move to folder</a></li>
+													</ul>
+												</div>
+											</td>
+										</tr>
+										
+									</tbody>
+								</table>
+								<!-- <div class="no-record">
+									<h4>No Record Found</h4>
+								</div> -->
+							</div>						    
+						  </div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+		
+	<!-- modal box -->
+		<div class="modal-window-wrapper "> 
+
+		  <!-- delete Signature-->
+		    <div class="modal-window small delete">
+		      <div class="title">
+		        <h2>Delete Signature</h2>
+		      </div>
+		      <a onclick="close_pop();" href="javascript:;" class="popup-close"></a>
+		      <div class="popup-form-outer">
+		      			<p>Are you sure, you want to Delete this signature?</p>
+		        <div class="submit-wrap">
+		          <a href="javascript:void(0)" class="common-btn" onclick="close_pop();">No</a>
+		          <a href="javascript:void(0)" class="common-btn unfill">Yes</a>
+		        </div>  
+		        <div class="clear"></div>       
+		      </div>
+		    </div>	 
+
+		<!-- move-folder-->
+		    <div class="modal-window small move-folder">
+		      <div class="title">
+		        <h2>Move File</h2>
+		      </div>
+		      <a onclick="close_pop();" href="javascript:;" class="popup-close"></a>
+		      <div class="popup-form-outer">
+		      		<div class="folder">
+		      			<a href="javascript:;"><img src="images/folder.svg"> Untitled Folder</a>
+		      			<a href="javascript:;"><img src="images/folder.svg">Lorem Ipsum</a>
+		      		</div>
+		        <div class="submit-wrap">
+		          <a href="javascript:void(0)" class="common-btn">Move</a>
+		          <a href="javascript:void(0)" class="common-btn unfill" onclick="close_pop();">Cancel</a>
+		        </div>  
+		        <div class="clear"></div>       
+		      </div>
+		    </div>
+
+
+		    <!-- add-signature -->
+
+		    <div class="modal-window lg signature-add">
+		    	<div class="profile right-panel">
+			    	<div id="tabs1" class="tabs">
+					  	<ul>
+						    <li class="active"><a href="#type"><svg viewBox="0 0 437.6 437.6"><use  xlink:href="#information-icon" /></svg> Type</a></li>
+						    <li><a href="#draw"><svg viewBox="0 0 16 14.997"><use  xlink:href="#signature-icon" /></svg>Draw</a></li>
+						    <li><a href="#saved"><svg viewBox="0 0 512 315.734"><use  xlink:href="#initials-icon" /></svg>Saved</a></li>
+					  	</ul>
+					  	<div class="tabs-all">
+					  		<div id="type">
+					  			<div class="form">
+						  			<div class="form-element">
+	                                    <input type="text" name="" id="name" value="John Appleased" placeholder="Enter Name" onkeyup="change_text();">   
+	                                    <div class="error"></div> 
+	                                </div> 
+                                    <div class="form-element remove-space">
+                                        <ul class="grid-2 select-cat">
+                                            <li>
+                                                <div class="select-btn">
+                                                    <label class="radio font_type1" >
+                                                        <div class="text_style">John Appleased</div>
+                                                        <input type="radio" name="type1"  checked="checked">
+                                                        <div class="layer-bx"></div>
+                                                        <i class="input-helper"></i>
+                                                	</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="select-btn">
+                                                    <label class="radio font_type2" id="text_2">
+                                                        <div class="text_style">John Appleased</div>              
+                                                        <input type="radio" name="type1">  
+                                                        <div class="layer-bx"></div>
+                                                        <i class="input-helper"></i>
+													</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="select-btn">
+                                                    <label class="radio font_type3">
+                                                        <div class="text_style">John Appleased</div>
+                                                        <input type="radio" name="type1" >
+                                                        <div class="layer-bx"></div>
+                                                        <i class="input-helper"></i>
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="select-btn">
+                                                    <label class="radio font_type4">
+                                                        <div class="text_style">John Appleased</div>
+                                                        <input type="radio" name="type1">  
+                                                        <div class="layer-bx"></div>
+                                                        <i class="input-helper"></i>
+													</label>
+                                                </div>
+                                            </li>                                                
+                                        </ul>
+                                    </div>
+                                </div>
+					  		</div>
+					  		<div id="draw">
+					  			<div id="signature-pad" class="signature-pad">
+									<div class="signature-pad--body">
+										<canvas></canvas>
+									</div>
+									<div class="signature-pad--footer">
+
+
+										<div class="signature-pad--actions">
+											 <div>
+												<button type="button" class="button-circle red active" data-action="red"></button>
+												<button type="button" class="button-circle black" data-action="black"></button>
+												<button type="button" class="button-circle blue" data-action="blue"></button>
+												<button type="button" class="button-btn undo" data-action="undo"><img src="images/undo.png" alt=""></button>
+												<button type="button" class="button-btn delete" data-action="clear"><img src="images/delete.png" alt=""></button>
+
+											</div>
+											<div>
+											</div>
+										</div>
+									</div>
+								</div>
+					  		</div>
+					  		<div id="saved">
+					  			<div class="form"> 
+                                    <div class="form-element remove-space">
+                                        <ul class="grid-2 select-cat">
+                                            <li>
+                                                <div class="select-btn">
+                                                    <label class="radio font_type1" >
+                                                        <div class="text_style1">John Appleased</div>
+                                                        <input type="radio" name="type1"  checked>
+                                                        <div class="layer-bx"></div>
+                                                        <a href="javascript:;" class="remove-sign"><img src="images/bin.png"></a>
+                                                        <i class="input-helper"></i>
+                                                	</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="select-btn">
+                                                    <label class="radio font_type2" id="text_2">
+                                                        <div class="text_style1">John Appleased</div>              
+                                                        <input type="radio" name="type1">  
+                                                        <div class="layer-bx"></div>
+                                                        <a href="javascript:;" class="remove-sign"><img src="images/bin.png"></a>
+                                                        <i class="input-helper"></i>
+													</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="select-btn">
+                                                    <label class="radio font_type3">
+                                                        <div class="text_style1">John Appleased</div>
+                                                        <input type="radio" name="type1" >
+                                                        <div class="layer-bx"></div>
+                                                        <a href="javascript:;" class="remove-sign"><img src="images/bin.png"></a>
+                                                        <i class="input-helper"></i>
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="select-btn">
+                                                    <label class="radio font_type4">
+                                                        <div class="text_style1">John Appleased</div>
+                                                        <input type="radio" name="type1">  
+                                                        <div class="layer-bx"></div>
+                                                        <a href="javascript:;" class="remove-sign"><img src="images/bin.png"></a>
+                                                        <i class="input-helper"></i>
+													</label>
+                                                </div>
+                                            </li>                                                
+                                        </ul>
+                                    </div>
+                                </div>
+					  		</div>
+					  	</div>
+					</div>
+					<div class="form save-sign">
+						<div class="form-element">
+							<label class="checkbox">
+								<input type="checkbox">
+								<i class="input-helper"></i>Save as primary signature
+							</label>
+						</div>
+						<div class="submit-wrap">
+							<a href="javascript:;" class="common-btn unfill" onclick="close_pop()">Cancel</a>
+							<a href="javascript:;" class="common-btn show-signature" onclick="close_pop()">Use</a>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+		    </div>
+
+		</div><!-- ends -->
+
+<!-- svg icons -->			
+	<svg style="display: none;">
+		<symbol id="information-icon">
+			<g class="info">
+				<path d="M194,142.8c0.8,1.6,1.6,3.2,2.4,4.4c0.8,1.2,2,2.4,2.8,3.6c1.2,1.2,2.4,2.4,4,3.6c1.2,0.8,2.8,2,4.8,2.4
+					c1.6,0.8,3.2,1.2,5.2,1.6c2,0.4,3.6,0.4,5.2,0.4c1.6,0,3.6,0,5.2-0.4c1.6-0.4,3.2-0.8,4.4-1.6h0.4c1.6-0.8,3.2-1.6,4.8-2.8
+					c1.2-0.8,2.4-2,3.6-3.2l0.4-0.4c1.2-1.2,2-2.4,2.8-3.6s1.6-2.4,2-4c0-0.4,0-0.4,0.4-0.8c0.8-1.6,1.2-3.6,1.6-5.2
+					c0.4-1.6,0.4-3.6,0.4-5.2s0-3.6-0.4-5.2c-0.4-1.6-0.8-3.2-1.6-5.2c-1.2-2.8-2.8-5.2-4.8-7.2c-0.4-0.4-0.4-0.4-0.8-0.8
+					c-1.2-1.2-2.4-2-4-3.2c-1.6-0.8-2.8-1.6-4.4-2.4c-1.6-0.8-3.2-1.2-4.8-1.6c-2-0.4-3.6-0.4-5.2-0.4c-1.6,0-3.6,0-5.2,0.4
+					c-1.6,0.4-3.2,0.8-4.8,1.6H208c-1.6,0.8-3.2,1.6-4.4,2.4c-1.6,1.2-2.8,2-4,3.2c-1.2,1.2-2.4,2.4-3.2,3.6
+					c-0.8,1.2-1.6,2.8-2.4,4.4c-0.8,1.6-1.2,3.2-1.6,4.8c-0.4,2-0.4,3.6-0.4,5.2c0,1.6,0,3.6,0.4,5.2
+					C192.8,139.6,193.6,141.2,194,142.8z"/>
+				<path d="M249.6,289.2h-9.2v-98c0-5.6-4.4-10.4-10.4-10.4h-42c-5.6,0-10.4,4.4-10.4,10.4v21.6c0,5.6,4.4,10.4,10.4,10.4h8.4v66.4
+					H188c-5.6,0-10.4,4.4-10.4,10.4v21.6c0,5.6,4.4,10.4,10.4,10.4h61.6c5.6,0,10.4-4.4,10.4-10.4V300
+					C260,294,255.2,289.2,249.6,289.2z"/>
+				<path  d="M218.8,0C98,0,0,98,0,218.8s98,218.8,218.8,218.8s218.8-98,218.8-218.8S339.6,0,218.8,0z M218.8,408.8
+					c-104.8,0-190-85.2-190-190s85.2-190,190-190s190,85.2,190,190S323.6,408.8,218.8,408.8z"/>
+			</g>
+		</symbol>
+		<symbol id="signature-icon">
+			<path id="Forma_1_copy" data-name="Forma 1 copy" d="M709.635,202a.635.635,0,0,1,0-1.27h14.73a.635.635,0,1,1,0,1.27Zm-.446-1.921a.628.628,0,0,1-.158-.638L711.742,191a.639.639,0,0,1,.374-.4l4.39-1.736,1.426-1.64a.65.65,0,0,1,.944-.036l3.424,3.366a.625.625,0,0,1-.037.928l-1.655,1.391-1.777,4.329a.64.64,0,0,1-.4.366l-8.591,2.667a.657.657,0,0,1-.649-.156Zm7.1-6.978a.625.625,0,0,1,0,.895l-4.325,4.252,5.79-1.8,1.556-3.79-2.569-2.525-3.86,1.526-1.828,5.692,4.326-4.253a.65.65,0,0,1,.91,0Zm1.482-3.742,2.322,2.283.807-.677-2.441-2.4Z" transform="translate(-709 -187.002)" />
+		</symbol>
+		<symbol id="initials-icon">
+			<g id="initials" transform="translate(-815 70.867)">
+			    <path id="Path_6" data-name="Path 6" d="M499.2,388.266h-8.533A4.273,4.273,0,0,1,486.4,384V281.6a72.617,72.617,0,0,0-72.533-72.533H379.734A72.617,72.617,0,0,0,307.2,281.6,12.8,12.8,0,0,0,320,294.4h34.133a12.8,12.8,0,0,0,12.8-12.8c0-19.858,11.108-46.933,29.867-46.933s29.867,27.075,29.867,46.933v7.9c-12.87,4.1-25.588,6.3-37.95,8.316-25.729,4.192-50.033,8.15-67.617,29.583-13.637,16.617-16.962,37.834-8.671,55.358,9.35,19.776,30.771,31.109,58.771,31.109h17.067c15.2,0,29.477-3.658,44.876-11.524a29.71,29.71,0,0,0,23.391,11.524H499.2a12.8,12.8,0,0,0,0-25.6Zm-72.533-11.484c-13.814,7.9-25.871,11.485-38.4,11.485-11.534,0-16.658-7.659-18.691-12.225a30.166,30.166,0,0,1,5.309-31.95c11.343-12.579,32.176-20.477,51.783-26.647v59.338h0Z" transform="translate(815 -169)" />
+			    <path id="Path_7" data-name="Path 7" d="M285.867,388.266h-8.492l-116.2-282.208a12.8,12.8,0,0,0-23.676,0L21.292,388.266H12.8a12.8,12.8,0,1,0,0,25.6H29.9c.049,0,.1,0,.148,0H46.933a12.775,12.775,0,0,0,1.967-25.4l24.677-59.932H182.421L207.1,388.464a12.775,12.775,0,0,0,1.967,25.4h76.8a12.8,12.8,0,0,0,0-25.6ZM84.118,302.933,128,196.364l43.882,106.569Z" transform="translate(815 -169)" />
+			</g>
+		</symbol>
+		<symbol id="upgrade-icon">
+			<g >
+				<g>
+					<g>
+						<path d="M496.64,232.96c-28.16-74.24-102.4-112.64-184.32-97.28C232.96,56.32,122.88,2.56,12.8,0C5.12,0,0,5.12,0,12.8
+							c2.56,110.08,56.32,220.16,133.12,299.52c-12.8,79.36,23.04,156.16,97.28,184.32c-12.8-33.28-15.36-71.68-5.12-110.08
+							c12.8,7.68,25.6,15.36,38.4,20.48c5.12,2.56,10.24,2.56,15.36-2.56l128-128c2.56-2.56,2.56-7.68,0-12.8
+							c-5.12-12.8-12.8-25.6-20.48-35.84C424.96,217.6,463.36,220.16,496.64,232.96z M215.04,215.04c-20.48,20.48-51.2,20.48-71.68,0
+							c-20.48-20.48-20.48-51.2,0-71.68c20.48-20.48,51.2-20.48,71.68,0C235.52,163.84,235.52,194.56,215.04,215.04z"/>
+					</g>
+				</g>
+				<g>
+					<g>
+						<path d="M504.32,368.64l-53.76-53.76c-10.24-10.24-25.6-10.24-35.84,0s-10.24,25.6,0,35.84l53.76,53.76
+							c10.24,10.24,25.6,10.24,35.84,0S514.56,378.88,504.32,368.64z"/>
+					</g>
+				</g>
+				<g>
+					<g>
+						<path d="M404.48,468.48l-53.76-53.76c-10.24-10.24-25.6-10.24-35.84,0s-10.24,25.6,0,35.84l53.76,53.76
+							c10.24,10.24,25.6,10.24,35.84,0S414.72,478.72,404.48,468.48z"/>
+					</g>
+				</g>
+				<g>
+					<g>
+						<path d="M473.6,440.32l-74.24-74.24c-10.24-10.24-25.6-10.24-35.84,0s-10.24,25.6,0,35.84l74.24,74.24
+							c10.24,10.24,25.6,10.24,35.84,0S483.84,450.56,473.6,440.32z"/>
+					</g>
+				</g>
+			</g>
+		</symbol>
+		<symbol id="payment-icon">
+			 <path id="Path_5" data-name="Path 5" d="M91.1,17H8.9a6.445,6.445,0,0,0-6.4,6.4V76.5a6.445,6.445,0,0,0,6.4,6.4H91.1a6.445,6.445,0,0,0,6.4-6.4V23.4A6.445,6.445,0,0,0,91.1,17Zm-67,50.6H18.8a3.1,3.1,0,1,1,0-6.2h5.3a3.1,3.1,0,1,1,0,6.2Zm19,0H37.8a3.1,3.1,0,1,1,0-6.2h5.3a3.1,3.1,0,1,1,0,6.2Zm19.1,0H56.9a3.1,3.1,0,0,1,0-6.2h5.3a3.116,3.116,0,0,1,3.1,3.1A3.183,3.183,0,0,1,62.2,67.6Zm19,0H75.9a3.1,3.1,0,0,1,0-6.2h5.3a3.1,3.1,0,1,1,0,6.2Zm3.1-24.7a2.689,2.689,0,0,1-2.7,2.7h-10a2.689,2.689,0,0,1-2.7-2.7v-10a2.689,2.689,0,0,1,2.7-2.7h10a2.689,2.689,0,0,1,2.7,2.7Z" transform="translate(-2.5 -17)" />
+		</symbol>		
+	</svg>
+
+<!-- ends -->
+
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/signature_pad.umd.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="js/custom.js"></script>
+
+	<script type="text/javascript">
+		function isNumberKey(evt){
+			var charCode = (evt.which) ? evt.which : event.keyCode
+			if (charCode > 31 && (charCode < 48 || charCode > 57))
+			return false;
+		} 
+		
+		 $( "#tabs" ).tabs();
+		 $( "#tabs1" ).tabs();
+
+		 $('#tabs1 a').click(function(){                    
+                resizeCanvas();
+            });
+
+		 $( ".datepicker" ).datepicker({
+		      changeMonth: true,
+		      changeYear: true,
+		      yearRange: "-100:+0"
+		    });
+
+
+		 $('.action a').click(function(){
+			$('.tab-navigation li .tabs').removeClass('show');
+			$('.action-data').removeClass('show');
+			$(this).parent('.action').find('.action-data').addClass('show');
+		});
+
+		$(document).click(function(){
+			$('.action-data').removeClass('show');
+			$('#datepicker').hide();
+		});
+		$('.action a').click(function(e){
+			    e.stopPropagation();
+			});
+
+
+		var $dp = $( "#datepicker" );  
+			    $dp.datepicker({changeMonth: true,
+				      changeYear: true,
+				      yearRange: "-100:+0"
+				  }).hide();
+			    $(".datepicker").click(function(event){        
+			        event.preventDefault();
+			        if ($dp.is(':hidden')) {
+			            $dp.show();
+			        }else{
+			            $dp.hide();
+			        }
+		    	});
+		    	$(document).click(function(){
+		    		$('#datepicker').hide();
+		    	});
+		    	$('.tabs-all').click(function(){
+		    		$('.action-data').removeClass('show');
+		    		$('#datepicker').hide();
+		    	}); 
+		    	$('.datepicker , #datepicker').click(function(e){
+		    		e.stopPropagation();
+		    	});
+
+
+
+		    	$('.button-circle').click(function(){
+					$('.button-circle').removeClass('active');
+					$(this).addClass('active');
+				});
+
+							 // text  change signature
+			    function change_text() {
+			        var text = $('#name').val();
+			        $('.text_style').html(text);
+			    }
+	</script>
+	</body>
+</html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.822 22.183">
+  <g id="home-icon-silhouette" transform="translate(0 0)">
+    <g id="Group_431" data-name="Group 431">
+      <g id="Group_430" data-name="Group 430" transform="translate(0 0)">
+        <path id="Path_297" data-name="Path 297" d="M23.423,27.071l-3.61-3.61V19.29a1.365,1.365,0,0,0-2.731,0v1.44l-2.688-2.688a3.592,3.592,0,0,0-4.966,0L.4,27.071A1.366,1.366,0,0,0,2.332,29l9.026-9.027a.806.806,0,0,1,1.1,0L21.491,29a1.366,1.366,0,1,0,1.932-1.931Z" transform="translate(-0.001 -17.047)" fill="#ffffff"/>
+        <path id="Path_298" data-name="Path 298" d="M77.712,127.944a.67.67,0,0,0-.948,0l-7.94,7.938a.672.672,0,0,0-.2.475v5.79a2.46,2.46,0,0,0,2.46,2.46h3.931v-8.088h4.438l-4.613,8.088h8.544a2.46,2.46,0,0,0,2.46-2.46v-5.79a.669.669,0,0,0-.2-.475Z" transform="translate(-65.327 -122.424)" fill="#ffffff"/>
+        <path id="Path_299" data-name="Path 299" d="M0,0H6V3.44H-.08Z" transform="translate(9 18.706)" fill="#ffffff"/>
+        <rect id="Rectangle_241" data-name="Rectangle 241" width="6" height="7" rx="1" transform="translate(9 12.706)" fill="#013f6a"/>
+      </g>
+    </g>
+  </g>
+</svg>

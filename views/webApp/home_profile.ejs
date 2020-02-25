@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html> 
+<head>
+<!-- Basic Page Needs ============== -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Locksign</title>
+
+    <!-- Mobile Specific Metas ============== -->
+    <meta name=viewport content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+     
+    <!-- favicon ============== -->
+   <link rel="shortcut icon" type="image/ico" href="images/favicon-16x16.png" /> 
+
+    <!-- CSS ============== -->
+    <!--link rel="stylesheet" type="text/css" href="../css/croppie.css" /-->
+
+    <link rel="stylesheet" type="text/css" href="css/common.css" /> 
+    <link rel="stylesheet" type="text/css" href="css/croppie.css" />
+    <link rel="stylesheet" type="text/css" href="css/login.css" /> 
+    <!-- js ============== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+
+</head>
+    <body class="outer-page">
+        <div class="wrapper">
+            <!--header start-->
+            <div class="header">
+                <div class="container">
+                    <div class="logo"><a href="index.html"><img src="images/logo.png" alt=""></a></div>
+                </div>    
+            </div>    
+            <!--header end-->
+            <div class="body-section">
+                <div class="container">
+                    <div class="wrapper_bx">
+                        <div class="form_wrapper col-12">
+                            <!--profile-->
+                            <div class="profile common-wh">
+                                <h2>Lets Create <span>Profile</span></h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                  Quisque magna ipsum, </p>
+                                <form class="form" action="add-signature.html">
+                                <div class="form-element">
+                                    <label>add photo</label>
+                                <div class="upload-img single-img">
+                                    <div class="image-add-icon"></div>
+                                    <div class="img-border">
+                                       <input type="file" value="Choose a file" class="upload-photo upload" accept="image/*">
+                                    </div>
+                                    <ul class="priview_image">
+                                    </ul>                          
+                                 </div>
+                                    <div class="error">Enter</div> 
+                                </div>                                    
+                                <div class="form-element">
+                                    <label>name</label>
+                                    <input type="text" name="" placeholder="Enter Name">   
+                                    <div class="error">Enter</div> 
+                                </div>
+                                <div class="form-element">
+                                    <label>phone</label>
+                                    <input type="phone" name="" placeholder="Phone Number (Optional)">   
+                                    <div class="error">Enter</div> 
+                                </div>
+                                <div class="form-element submit">
+                                     <button >Done</button>
+                                </div>                                                                                 </form>
+
+                            </div>
+                            <!--profile end-->
+                        </div>
+
+                    </div>    
+                </div>  
+            </div>    
+        </div>
+    </body>
+</html>
+<!--pop up section-->
+<div class="modal-window-wrapper ">   
+    <div class="modal-window email_popup">
+        <a onclick="close_pop();" href="javascript:;" class="popup-close"></a>
+        <div class="email_wrapper">
+            <div class="overlay-curve half-part"></div>
+            <div class="overlay-email"></div>
+            <div class="email_panel_lf">
+                <h3>Verification link sent!</h3>
+                <p>We emailed a confirmation link to <a href="javascript:;">email@locksign.co</a>  Check your email for a link to login in and create profile</p>
+                <span>Didn’t get a confirmation email?</span>
+                <a href="" class="resend">Resend Email Again</a>
+                <a href="" class="btn">Check Verification Status</a>
+            </div>
+        </div>
+    </div>
+</div>    
+<!--pop up section end-->
+<!--  crop popup -->
+<div class="cropper-wrapper small">
+    <div class="cropper-overlay"></div>
+    <div class="cropper-window">
+        <div class="demo-wrap upload-demo">
+            <div class="col-1-2">
+                <div class="upload-msg">
+                    Upload a file to start cropping
+                </div>
+                <div class="upload-demo-wrap">
+                    <div id="upload-demo"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="modal-footer">
+            <div class="row">  
+               <div class="btn-space"> <a href="javascript:;" class="common-btn submit upload-result">Apply<span></span></a></div>
+                <div class="btn-space"><a href="javascript:void(0)" class="common-btn submit-clear  unfill cancel_cp">Cancel<span></span></a></div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--js files-->
+
+<script src="js/croppie-min.js"></script>
+<script src="js/fixed-croppie.js"></script>
+<script type="text/javascript">
+    /*croppie*/
+    Demo.init();
+     Demo_new.init();
+
+  $('#myTags').tagit();
+
+  $( function() {
+    $( ".select" ).selectmenu();
+ } );    
+</script>
+
+

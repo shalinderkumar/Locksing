@@ -1,0 +1,999 @@
+resourcePath: /Api
+description: All about API
+apis: 
+
+- path: /user/signUp
+  operations:
+
+  - httpMethod: POST
+    summary: Signup with email id
+    nickname: userp-signUp
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: email
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your email
+    - name: password
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your password
+    - name: deviceType
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your deviceType
+    - name: deviceToken
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your deviceToken
+
+- path: /user/social/signUp
+  operations:
+
+  - httpMethod: POST
+    summary: Signup with social media
+    nickname: userp-social-signUp
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: email
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your email
+    - name: social_id
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your social_id
+    - name: social_type
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your social_type(Linkdin,google,facebook)
+    - name: deviceType
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your deviceType
+    - name: deviceToken
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your deviceToken
+
+- path: /user/login
+  operations:
+
+  - httpMethod: POST
+    summary: login
+    nickname: userp-login
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: email
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your email
+    - name: password
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your password
+    - name: deviceType
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your deviceType
+    - name: deviceToken
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your deviceToken
+
+- path: /user/social/login
+  operations:
+
+  - httpMethod: POST
+    summary: login
+    nickname: userp-login
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: email
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your email
+    - name: social_id
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your social_id
+    - name: social_type
+      dataType: integer
+      in: body
+      paramType: form
+      required: true
+      description: Your social_type(0=Linkdin,1=google,2=facebook)
+    - name: deviceType
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your deviceType
+    - name: deviceToken
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your deviceToken
+      
+- path: /user/email/verification
+  operations:
+
+  - httpMethod: POST
+    summary: user email verification status
+    nickname: userp-email-verification
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: access_token
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your access_token
+    - name: email
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your email
+
+- path: /user/signature
+  operations:
+
+  - httpMethod: POST
+    summary: create-user-signature
+    nickname: user-signature
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: access_token
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your access_token
+    - name: image
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your image
+
+- path: /user/profile
+  operations:
+
+  - httpMethod: POST
+    summary: create-user-profile
+    nickname: user-profile
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: access_token
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your access_token
+    - name: name
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your name
+    - name: phone_number
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your phone_number
+    - name: country_code
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your country_code
+    - name: image
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your image
+
+- path: /user/profile
+  operations:
+
+  - httpMethod: POST
+    summary: save general profile info
+    nickname: user-profile
+
+    produces:
+        - application/json
+    parameters:      
+
+    - name: access_token
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your access_token
+    - name: name
+      dataType: string
+      in: body
+      paramType: form
+      required: false
+      description: Your name
+    - name: first_name
+      dataType: string
+      in: body
+      paramType: form
+      required: false
+      description: Your first_name
+    - name: middle_name
+      dataType: string
+      in: body
+      paramType: form
+      required: false
+      description: Your middle_name
+    - name: last_name
+      dataType: string
+      in: body
+      paramType: form
+      required: false
+      description: Your last_name
+    - name: phone_number
+      dataType: string
+      in: body
+      paramType: form
+      required: false
+      description: Your phone_number
+    - name: contact_number
+      dataType: string
+      in: body
+      paramType: form
+      required: false
+      description: Your contact_number
+    - name: dob
+      dataType: date
+      in: body
+      paramType: form
+      required: false
+      description: Your dob
+    - name: email
+      dataType: string
+      in: body
+      paramType: form
+      required: false
+      description: Your email
+    - name: house_number
+      dataType: string
+      in: body
+      paramType: form
+      required: false
+      description: Your house_number
+    - name: locality
+      dataType: string
+      in: body
+      paramType: form
+      required: false
+      description: Your locality
+    - name: pincode
+      dataType: string
+      in: body
+      paramType: form
+      required: false
+      description: Your pincode
+    - name: city
+      dataType: string
+      in: body
+      paramType: form
+      required: false
+      description: Your city
+    - name: state
+      dataType: string
+      in: body
+      paramType: form
+      required: false
+      description: Your state
+    - name: country
+      dataType: string
+      in: body
+      paramType: form
+      required: false
+      description: Your country
+
+- path: /user/forgotPassword
+  operations:
+
+  - httpMethod: POST
+    summary: user-forgotPassword
+    nickname: forgotPassword
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: email
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your email
+    - name: device_token
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your device_token
+    - name: device_type
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your device_type
+
+- path: /user/data
+  operations:
+
+  - httpMethod: POST
+    summary: user-data
+    nickname: userData
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: access_token
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your access_token
+
+- path: /resend/email
+  operations:
+
+  - httpMethod: POST
+    summary: resend-email
+    nickname: resendEmail
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: email
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your email
+    - name: device_token
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your device_token
+    - name: device_type
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your device_type
+
+- path: /deleteSignature
+  operations:
+
+  - httpMethod: POST
+    summary: Delete user signature
+    nickname: deleteSignature
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: access_token
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your access_token
+    - name: signature_id
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your signature_id
+
+- path: /signatures
+  operations:
+
+  - httpMethod: GET
+    summary: list of user signatures
+    nickname: signatures
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: access_token
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your access_token
+    - name: document_type
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your document_type
+
+- path: /primarySignature
+  operations:
+
+  - httpMethod: Post
+    summary: add primarySignature
+    nickname: primarySignature
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: access_token
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your access_token
+    - name: signature_id
+      dataType: integer
+      in: body
+      paramType: form
+      required: true
+      description: Your signature_id
+
+- path: /user/initial
+  operations:
+
+  - httpMethod: POST
+    summary: create-user-initial
+    nickname: user-initial
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: access_token
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your access_token
+    - name: image
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your image
+
+- path: /deleteInitial
+  operations:
+
+  - httpMethod: POST
+    summary: Delete user initial
+    nickname: deleteInitial
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: access_token
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your access_token
+    - name: initial_id
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your initial_id
+
+- path: /initials 
+  operations:
+
+  - httpMethod: GET
+    summary: list of user initials
+    nickname: initials
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: access_token
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your access_token
+    - name: document_type
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your document_type
+
+- path: /primaryInitial
+  operations:
+
+  - httpMethod: Post
+    summary: add primaryInitial
+    nickname: primaryInitial
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: access_token
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your access_token
+    - name: initial_id
+      dataType: integer
+      in: body
+      paramType: form
+      required: true
+      description: Your initial_id
+
+- path: /user/information
+  operations:
+
+  - httpMethod: POST
+    summary: user-information
+    nickname: userInformation
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: access_token
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your access_token
+
+- path: /documents
+  operations:
+
+  - httpMethod: POST
+    summary: save documents
+    nickname: documents
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: access_token
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your access_token
+    - name: name
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your name
+    - name: document
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your document
+    - name: local_doc_id
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your local_doc_id
+    - name: sha_key
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your sha_key
+    - name: title
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your title
+    - name: description
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your description
+    - name: user_ids
+      dataType: integer
+      in: body
+      paramType: form
+      required: false
+      description: Your user_ids(array of user_ids)
+    - name: is_completed
+      dataType: string
+      in: body
+      paramType: form
+      required: false
+      description: Your is_completed
+    - name: need_to_share
+      dataType: integer
+      in: body
+      paramType: form
+      required: false
+      description: Your need_to_share
+    - name: status
+      dataType: integer
+      in: body
+      paramType: form
+      required: true
+      description: Your status(0=Single,1=Multiple Users)
+
+- path: /users
+  operations:
+
+  - httpMethod: POST
+    summary: search users
+    nickname: users
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: access_token
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your access_token
+    - name: email
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your email
+
+- path: /userNeedSignature
+  operations:
+
+  - httpMethod: GET
+    summary: userNeedSignature
+    nickname: userNeedSignature
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: access_token
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your access_token
+
+- path: /documentCompleted
+  operations:
+
+  - httpMethod: GET
+    summary: documentCompleted
+    nickname: documentCompleted
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: access_token
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your access_token
+
+- path: /pendingDocumentSign
+  operations:
+
+  - httpMethod: GET
+    summary: pendingDocumentSign
+    nickname: pendingDocumentSign
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: access_token
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your access_token
+
+- path: /updateDocument
+  operations:
+
+  - httpMethod: POST
+    summary: updateDocument
+    nickname: updateDocument
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: access_token
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your access_token
+    - name: document_id
+      dataType: integer
+      in: body
+      paramType: form
+      required: true
+      description: Your document_id
+    - name: document
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your document
+    - name: sha_key
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your sha_key
+
+- path: /reminders
+  operations:
+
+  - httpMethod: POST
+    summary: reminders
+    nickname: reminders
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: access_token
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your access_token
+    - name: document_id
+      dataType: integer
+      in: body
+      paramType: form
+      required: true
+      description: Your document_id
+    - name: user_ids
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your user_ids(array of user_ids)
+
+- path: /appVersion
+  operations:
+
+  - httpMethod: POST
+    summary: app Version
+    nickname: appVersion
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: app_type
+      dataType: string
+      in: body
+      paramType: form
+      required: true
+      description: Your app_type
+
+- path: /documentInformation/{document_id}
+  operations:
+
+  - httpMethod: GET
+    summary: documentInformation
+    nickname: documentInformation
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: document_id
+      dataType: string
+      in: path
+      paramType: form
+      required: true
+      description: Your document_id
+
+- path: /recentDocuments
+  operations:
+
+  - httpMethod: GET
+    summary: recentDocuments
+    nickname: recentDocuments
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: access_token
+      dataType: string
+      in: query
+      paramType: form
+      required: true
+      description: Your access_token
+
+- path: /hideDocument
+  operations:
+
+  - httpMethod: POST
+    summary: hideDocument
+    nickname: hideDocument
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: access_token
+      dataType: string
+      in: query
+      paramType: form
+      required: true
+      description: Your access_token
+    - name: document_id
+      dataType: string
+      in: query
+      paramType: form
+      required: true
+      description: Your document_id
+
+- path: /favouriteDocument
+  operations:
+
+  - httpMethod: POST
+    summary: favouriteDocument
+    nickname: favouriteDocument
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: access_token
+      dataType: string
+      in: query
+      paramType: form
+      required: true
+      description: Your access_token
+    - name: document_id
+      dataType: string
+      in: query
+      paramType: form
+      required: true
+      description: Your document_id
+    - name: status
+      dataType: string
+      in: query
+      paramType: form
+      required: true
+      description: Your status
+
+- path: /importantDocuments
+  operations:
+
+  - httpMethod: GET
+    summary: importantDocuments
+    nickname: importantDocuments
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: access_token
+      dataType: string
+      in: path
+      paramType: form
+      required: true
+      description: Your access_token
+
+- path: /editFileName
+  operations:
+
+  - httpMethod: PUT
+    summary: editFileName
+    nickname: editFileName
+    
+    produces:
+        - application/json
+    parameters:      
+
+    - name: access_token
+      dataType: string
+      in: path
+      paramType: form
+      required: true
+      description: Your access_token
+    - name: owner
+      dataType: integer
+      in: path
+      paramType: form
+      required: true
+      description: Your owner(0=No,1=Yes)
+    - name: document_id
+      dataType: string
+      in: path
+      paramType: form
+      required: true
+      description: Your document_id
+    - name: name
+      dataType: string
+      in: path
+      paramType: form
+      required: true
+      description: Your name(file name)

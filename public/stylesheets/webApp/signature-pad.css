@@ -1,0 +1,54 @@
+/**font type1**/
+@font-face {
+    font-family: 'alex_brushregular';
+    src: url('/../images/webApp/fonts/alexbrush-regular-webfont.eot');
+    src: url('/../images/webApp/fonts/alexbrush-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/../images/webApp/fonts/alexbrush-regular-webfont.woff') format('woff'),
+         url('/../images/webApp/fonts/alexbrush-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bradley_hand_itc_ttregular';
+    src: url('/../images/webApp/fonts/bradhi-webfont.eot');
+    src: url('/../images/webApp/fonts/bradhi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/../images/webApp/fonts/bradhi-webfont.woff2') format('woff2'),
+         url('/../images/webApp/fonts/bradhi-webfont.woff') format('woff'),
+         url('/../images/webApp/fonts/bradhi-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'cookieregular';
+    src: url('/../images/webApp/fonts/cookie-regular-webfont.eot');
+    src: url('/../images/webApp/fonts/cookie-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/../images/webApp/fonts/cookie-regular-webfont.woff2') format('woff2'),
+         url('/../images/webApp/fonts/cookie-regular-webfont.woff') format('woff'),
+         url('/../images/webApp/fonts/cookie-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'kunstler_scriptregular';
+    src: url('/../images/webApp/fonts/kunstler-webfont.eot');
+    src: url('/../images/webApp/fonts/kunstler-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/../images/webApp/fonts/kunstler-webfont.woff2') format('woff2'),
+         url('/../images/webApp/fonts/kunstler-webfont.woff') format('woff'),
+         url('/../images/webApp/fonts/kunstler-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@media (max-width: 940px) {
+  #github img {
+    width: 90px;
+    height: 90px;
+  }
+}

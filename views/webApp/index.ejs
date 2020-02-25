@@ -1,0 +1,489 @@
+
+<!DOCTYPE html>
+<html> 
+<head>
+<!-- Basic Page Needs ============== -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Locksign</title>
+
+    <!-- Mobile Specific Metas ============== -->
+    <meta name=viewport content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+     
+    <!-- favicon ============== -->
+   <link rel="shortcut icon" type="image/ico" href="/../images/webApp/favicon-16x16.png" /> 
+
+    <!-- CSS ============== -->
+    <!--link rel="stylesheet" type="text/css" href="../css/croppie.css" /-->
+    <link rel="stylesheet" media="all" href="/../stylesheets/webApp/aos-animation.css" data-turbolinks-track="reload" />
+    <link rel="stylesheet" type="text/css" href="/../stylesheets/webApp/swiper.min.css" /> 
+    <link rel="stylesheet" type="text/css" href="/../stylesheets/webApp/common.css" /> 
+    <link rel="stylesheet" type="text/css" href="/../stylesheets/webApp/login.css" /> 
+    <!-- js ============== -->
+    <script src="/../javascripts/webApp/jquery-1.11.3.min.js"></script>
+
+
+</head>
+    <body class="outer-page">
+        <!-- loader on page load -->
+        <div class="loader-sec" id="preloader">
+            <div class="loader-center"  id="status">
+                <div class="loader">
+                    <div class="loader-inner">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="loader-inner2">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>  
+        </div> 
+        <!-- loader end -->        
+        <div class="wrapper home-page">
+            <!--header start-->
+            <div class="header ">
+                <div class="container">
+                <div class="nav-toggle">
+                    <a id="menu_toggle">
+                        <i class="icon bars"></i>
+                        <i class="icon bars"></i>
+                        <i class="icon bars"></i>
+                    </a>
+                </div>
+
+                    <div class="logo"><a href="index.html"><img src="/../images/webApp/logo-icon.png" alt="">LockSign</a>
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#work">How It Works</a></li>
+                            <li><a href="#locksign">Why LockSign</a></li>
+                            <li><a href="#price">Pricing</a></li>
+                        </ul>    
+                    </div>
+                    <div class="menu_login">
+                       <ul>
+                            <li><a href="<%=baseUrl%>webApp/sign-in">Log in</a></li>
+                            <li><a href="<%=baseUrl%>webApp/sign-up" class="btn">Signup for Free</a></li>  
+                       </ul> 
+                    </div>
+                </div>    
+            </div>    
+            <!--header end-->
+            <!--hero section-->
+            <div class="hero-section">
+                <div class="container">
+                    <div class="panel_banner" >
+                        <div class="dot-layer"></div>
+                        <div class="banner-layer" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-offset="200">
+                            <img src="/../images/webApp/banner.png" alt="">
+                        </div>
+                    </div>
+                    <div class="panel_info" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1200" data-aos-offset="200">
+                        <h2>Save Paper,
+                        <span>Save Trees</span></h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque magna ipsum</p>
+                         <a href="singup.html" class="btn">Start From Today <i class="icon-right"></i></a>   
+                    </div>
+
+                </div>
+            </div>    
+            <!--hero section end-->
+            <!--hero section-->
+            <div class="signature-section common-spacing">
+                <div class="container">
+                    <div class="signature-image" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="800"><img src="/../images/webApp/singature-icon.png" alt=""></div>
+                    <div class="signature-info font-title" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="800">
+                        <span>Security purposes</span>
+                        <h3 >Encrypt your signatures with a QR Code</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque magna ipsum, pellentesque vitae quam vel, pharetra tincidunt lacus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames acturpis egesta</p>
+                    </div>
+                </div>
+            </div>    
+             <!--hero section end-->
+           
+            <div class="layer-color"> 
+             <!--hero section-->   
+            <div class="step-section common-spacing" id="work"  >
+                <div class="container font-title" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="800"  >
+                    <span >LockSign Features</span>
+                    <h3 >Three easy steps</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p> 
+                </div>                       
+                <div class="step_box">
+                    <div class="layer_blue"><div class="container"></div></div>
+                    <div class="container">    
+                    <ul class="grid-4 ">
+                        <li>
+                            <div class="box" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="400">
+                            <div class="count">1</div>
+                            <div class="icon"><img src="/../images/webApp/add_doc_icon.svg" alt=""></div>
+                            <p>Add a document</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="box" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="600">
+                            <div class="count">2</div>
+                            <div class="icon"><img src="/../images/webApp/pen_icon.svg" alt=""></div>
+                            <p>Add Signature</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="box" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="800">
+                            <div class="count">3</div>
+                            <div class="icon"><img src="/../images/webApp/share_icon.svg" alt=""></div>
+                            <p>Share a Sign Document</p>
+                            </div>
+                        </li>                                                        
+                    </ul>
+                    </div> 
+                </div>
+            </div>    
+             <!--hero section end-->     
+             <!--video section-->
+            <div class="video-section common-spacing" id="locksign">
+                <div class="container">
+                    <div class="video-box" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="800">
+                        <div class="video-layer">
+                            <div class="video-container">
+                                <video id="video" class="video" poster="/../images/webApp/poster.jpg" preload="none" onended="videoEnded()">
+                                   <source src="/../images/webApp/file.mp4" type="video/mp4">
+                                </video>
+                                <div class="play-btn play"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-info font-title" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="800">
+                        <span>Why LockSign</span>
+                        <h3 >Sign any document, anywhere!</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque magna ipsum, pellentesque vitae quam vel, pharetra tincidunt lacus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames acturpis egesta</p>
+                        <a href="" class="learn_more">Learn More</a>
+                    </div>
+                </div>
+            </div>                
+             <!--video section end-->
+            </div>    
+            <!--app download-->
+            <div class="app-download-wrap" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="800">
+                <div class="container">
+                    <div class="right-penal">
+                        <div class="slider-background">
+                            <div class="app-download-slider">                                     
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide"><img src="/../images/webApp/dwonload-slider1.jpg"></li>
+                                    <li class="swiper-slide"><img src="/../images/webApp/dwonload-slider2.jpg"></li>
+                                    <li class="swiper-slide"><img src="/../images/webApp/dwonload-slider1.jpg"></li>
+                                    <li class="swiper-slide"><img src="/../images/webApp/dwonload-slider2.jpg"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="left-penal">
+                        <div class="font-title">
+                            <span>Download our App</span>
+                            <h3>Simple and flexible App suit your needs</h3>
+                        </div>
+                        <p>Try our world class App specially designed for nature lovers.</p>
+                        <div class="download-btn-wrap">
+                            <a href="#"><img src="/../images/webApp/apply-btn.png"></a>
+                            <a href="#"><img src="/../images/webApp/web-btn.png"></a>
+                        </div>
+                    </div>
+
+                </div>                   
+            </div>
+            <!-- end her -->            
+
+             <!--price section-->
+            <div class="price-cover" id="price"> 
+            <div class="price-section common-spacing"  data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-offset="300">
+                <div class="dot-gb-layer"></div>
+                <div class="container" >
+                    <div class="price-box font-title" >
+                    <div class="col-center">    
+                        <span>Pricing & Plans</span>
+                        <h3>For Individuals and Enterprise solutions, locksign provides great pricing solution</h3>
+                    </div>
+                    <div class="pricing-container">
+                        <ul class="grid-2">
+                            <li>
+                                <div class="price-bx">
+                                    <p class="start">Today <span>Start</span></p>
+                                    <h4>ITS FREE<i>*</i></h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </p>
+                                    <a href="" class="btn">Get It Now !</a>    
+                                     <ul>
+                                        <li>Limited Number of Documents</li> 
+                                        <li>Malesuada nunc vel </li> 
+                                        <li>sed do eiusmod</li>    
+                                     </ul>   
+                                </div>  
+
+                            </li>
+                            <li>
+                                <div class="price-bx beta">
+                                    <p class="start">Beta <span> Premium</span></p>
+                                    <h4>$ 19.99<i>/ user / y</i></h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </p>
+                                    <a href="" class="btn">Get It Now !</a>    
+                                     <ul>
+                                        <li>Limited Number of Documents</li> 
+                                        <li>Malesuada nunc vel </li> 
+                                        <li>sed do eiusmod</li>    
+                                     </ul>   
+                                </div>  
+
+                            </li>                            
+                        </ul>
+
+                    </div>    
+                    </div>    
+                </div>    
+            </div>  
+            </div>  
+             <!--price section end-->
+             <!--client logo-->
+             <div class="client-logo-section common-spacing" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="800">
+                <div class="container">
+                    <div class="client-wrapper">
+                                     
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <img src="/../images/webApp/dummy1.png" alt="">
+                                </li>
+                                <li class="swiper-slide">
+                                    <img src="/../images/webApp/dummy2.png" alt="">
+                                </li>
+                                <li class="swiper-slide">
+                                    <img src="/../images/webApp/dummy3.png" alt="">
+                                </li>   
+                                <li class="swiper-slide">
+                                    <img src="/../images/webApp/dummy4.png" alt="">
+                                </li>
+                                <li class="swiper-slide">
+                                    <img src="/../images/webApp/dummy1.png" alt="">
+                                </li>
+                                <li class="swiper-slide">
+                                    <img src="/../images/webApp/dummy2.png" alt="">
+                                </li>                                                                                       
+
+                            </ul>
+                  
+                    </div>
+                </div>    
+             </div>    
+
+              <!--client end-->
+             <!--testimonails start-->
+            <div class="testimonails-section common-spacing" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="800" >
+                <div class="container">
+                    <div class="testimonails-box font-title">
+                        <div class="col-center">    
+                            <span>Testimonails</span>
+                            <h3>Our happy clients say's about us</h3>
+                        </div>  
+
+                          <div class="swiper-container">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <div class="gd-col-3">
+                                        <div class="user-image"><img src="/../images/webApp/user-pic.jpg"></div>
+                                        <span>Johnson</span>
+                                        <i>Writer @Google</i>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non placerat nunc. Sed et ipsum fermentum, gestas est in, semper odio. </p>
+                                     </div>
+                                </li>
+                                 <li class="swiper-slide">
+                                    <div class="gd-col-3">
+                                        <div class="user-image"><img src="/../images/webApp/user-pic.jpg"></div>
+                                        <span>Johnson</span>
+                                        <i>Writer @Google</i>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non placerat nunc. Sed et ipsum fermentum, gestas est in, semper odio. </p>
+                                     </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="gd-col-3">
+                                        <div class="user-image"><img src="/../images/webApp/user-pic.jpg"></div>
+                                        <span>Johnson</span>
+                                        <i>Writer @Google</i>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non placerat nunc. Sed et ipsum fermentum, gestas est in, semper odio. </p>
+                                     </div>
+                                </li>
+                                 <li class="swiper-slide">
+                                    <div class="gd-col-3">
+                                        <div class="user-image"><img src="/../images/webApp/user-pic.jpg"></div>
+                                        <span>Johnson</span>
+                                        <i>Writer @Google</i>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque non placerat nunc. Sed et ipsum fermentum, gestas est in, semper odio. </p>
+                                     </div>
+                                </li>                                                                     
+
+                            </ul>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                       
+                    </div> 
+                </div>
+            </div>
+             </div>                  
+             <!--testimonails end-->
+             <!--footer section-->
+            <div class="footer-layer" >
+                 <div class="footer-layer-inner"> </div> 
+                    <div class="container" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="800" data-aos-offset="300">
+                        <span>Start a Free LockSign Today <i>and enjoy unlimited Support*</i> </span>
+                        <p>Lorem ipsum dolor sit amet, consectetur<i>Pellentesque non placerat nunc.</i></p>
+                        <a href="singup.html" class="btn">Signup For Free</a>
+
+                    </div>   
+               
+            </div>    
+
+            <div class="footer-section">
+                <div class="container">
+                    <div class="footer-menu">
+                        <div class="col-2" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="800">
+                            <span>Trending Topics</span>
+                            <ul>
+                                <li><a href="javascript:;">LockSign Vs SignEasy</a></li>
+                                <li><a href="javascript:;">eSign Act</a></li>
+                                <li><a href="javascript:;">eIDAS</a></li>
+                                <li><a href="javascript:;">GDPR Compliance</a></li>
+                                <li><a href="javascript:;">Sign PDF Online</a></li>
+                                <li><a href="javascript:;">Create eSignature</a></li>
+                            </ul>
+                            
+                        </div>   
+                        <div class="col-2"  data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="800">
+                            <span>Company</span>
+                            <ul>
+                                <li><a href="javascript:;">About Us</a></li>
+                                <li><a href="javascript:;">Team</a></li>
+                                <li><a href="javascript:;">Our Journey</a></li>
+                                <li><a href="privacy.html">Privacy Policy</a></li>
+                                <li><a href="terms.html">Terms &amp; Conditions</a></li>
+                            </ul>
+                            
+                        </div>
+                         <div class="col-2"  data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="800">
+                            <span>Resources</span>
+                            <ul>
+                                <li><a href="help.html">Help Centre</a></li>
+                                <li><a href="javascript:;">Contact Us</a></li>
+                                <li><a href="javascript:;">Blog</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="col-3"  data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="800"> 
+                            <div class="logo"><a href="index.html"><img src="/../images/webApp/logo-icon.png" alt="">LockSign</a>
+                            </div>
+                            <span><a href="mailto:contact@locksign.com">contact@locksign.com</a></span>
+                            <p>(+1) 123-456-7890</p>   
+                        </div>                                                                    
+                    </div> 
+                </div>     
+                <div class="footer-copyright" ><div class="container"><p>&#169; 2019 <span>Locksign</span>, All Right Reserved </p> </div></div>   
+                               
+            </div> 
+             <!--footer end-->
+        </div>
+    </body>
+</html>
+
+<!--js files-->
+
+<script src="/../javascripts/webApp/swiper.min.js"></script>
+<script src="/../javascripts/webApp/home.js"></script>
+<script src="/../javascripts/webApp/aos.js"></script>
+
+<!--swiper slider login page-->
+<script type="text/javascript">
+var swiper = new Swiper('.swiper-container', {
+    pagination: '.swiper-pagination',
+    autoHeight: true, //enable auto height
+    spaceBetween: 0,    
+    slidesPerView: 'auto',
+    autoplay: 4000,
+    loop: true,
+    centeredSlides: true,
+    paginationClickable: true,
+
+});
+
+var swiper = new Swiper('.client-wrapper', {
+    autoHeight: true, //enable auto height
+    spaceBetween: 0,    
+    slidesPerView: 'auto',
+    autoplay: 4000,
+    loop: true,
+});
+
+var swiper = new Swiper('.app-download-slider', {
+    autoHeight: true,
+    autoplay: 4000,
+    loop: true,
+});
+
+    $(document).ready(function () {
+    $(document).on("scroll", onScroll);
+    
+    //smoothscroll
+    $('.menu a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+        
+        $('a').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+      
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top+2
+        }, 500, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+    });
+}); 
+
+function onScroll(event){
+var scrollPos = $(document).scrollTop();
+$('.menu a').each(function () {
+    var currLink = $(this);
+    var refElement = $(currLink.attr("href"));
+        if($(window).width() >= 768)
+{       
+    if (refElement.position().top <= scrollPos && refElement.position().top -95 + refElement.height() > scrollPos) {
+        $('.menu ul li a').removeClass("active");
+        currLink.addClass("active");
+    }
+    else{
+        currLink.removeClass("active");
+    }
+    }           
+});
+}
+   function call_animation(){
+  AOS.init({
+    offset: 100,
+    duration: 400,
+    easing: 'ease-in-quad',
+    delay: 100,  
+  });
+}
+  AOS.init({
+    offset: 100,
+    duration: 400,
+    easing: 'ease-in-quad',
+    delay: 100,  
+  });
+</script>

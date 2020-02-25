@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>LockSign</title>
+		<meta name=viewport content="width=device-width, initial-scale=1, user-scalable=no">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+
+		<link rel="shortcut icon" type="image/ico" href="images/favicon.png" />
+		<!-- css -->
+		<link rel="stylesheet" href="css/icon.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/dashboard.css">
+		<!-- jquery script -->
+	    <script src="js/jquery-3.3.1.min.js"></script>
+	</head>
+	<body>	
+		<div class="wrapper home-page">
+			<div class="left-panel scroll_custom">
+				<div class="image-panel">
+					<div class="close-icon">
+						<a href="javascript:;"><img src="images/cross1.svg"></a>
+					</div>
+					<a href="profile.html">
+						<div class="image-box">
+							<img src="images/thumbnail.png">
+						</div>
+						<p>John Appleased</p>
+					</a>
+				</div>
+				<div class="navbar">
+					<ul>
+						<li class="change">
+							<a href="javascript:;" class="title">
+								<div class="nav-icon home"></div>
+								<div class="nav-title">Home <i class="icon ion-chevron-down"></i></div>	
+							</a>
+							<div class="drop-wrap">
+								<ul>
+									<li><a href="dashboard.html">Recent</a></li>
+									<li><a href="important.html">Important</a></li>
+									<li class="current"><a href="offline.html">Offline</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="javascript:;" class="title">
+								<div class="nav-icon document" class="title"></div>
+								<div class="nav-title">Documents <i class="icon ion-chevron-down"></i></div>
+							</a>
+							<div class="drop-wrap">
+								<ul>
+									<li><a href="signature.html">Needs for Signature</a></li>
+									<li><a href="waiting-others.html">Waiting for others</a></li>
+									<li><a href="completed.html">Completed</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="profile.html">
+								<div class="nav-icon account"></div>
+								<div class="nav-title">My Account</div>
+							</a>
+						</li>
+						<li><a href="settings.html">
+								<div class="nav-icon setting"></div>
+								<div class="nav-title">Settings</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="foot">
+					<div class="logo">
+						<a href="javascript:;">
+							<img src="images/logo.png" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="right-panel">
+				<div class="header">
+					<div class="left-section">
+						<div class="nav-toggle">
+		                    <a id="menu_toggle" class="">
+		                        <i class="icon bars"></i>
+		                        <i class="icon bars"></i>
+		                        <i class="icon bars"></i>
+		                    </a>
+		                </div>
+						<div class="page-title">
+							<img src="images/home.svg"> Home
+						</div>
+					</div>
+					<div class="right-section">
+						<div class="common-section search">
+							<input type="text" placeholder="Search">
+							<input type="submit" value="" class="search">
+						</div>
+						<div class="common-section search-t-b">
+							<a href="javascript:;" class="custom-tooltip" data-name="Search"><img src="images/serach.png"></a>
+						</div>
+						 <!-- <div class="common-section calender">
+							<a href="javascript:;"><img src="images/calander.png" alt=""></a>
+						</div>
+						<div class="common-section folder">
+							<a href="javascript:;"><img src="images/folder.png" alt=""></a>
+						</div> --> 
+						<div class="common-section add-icon custom-tooltip" data-name="Add pdf">
+							<a href="javascript:;"><i class="icon ion-plus-round"></i></a>
+							<div class="upload-folders">
+								<a href="javascript:;" class="custom-tooltip dropbox" data-name="Dropbox"><img src="images/dropbox.png"></a>
+								<a href="javascript:;" class="custom-tooltip drive" data-name="G-Drive"><img src="images/drive.png"></a>
+								<a href="javascript:;" class="system"><img src="images/system.png"><span>Upload File</span><input type="file" id="file-up" accept="application/msword,text/plain, application/pdf"></a>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="main_section">
+					<div class="title"><h3>Offline</h3></div>
+					
+					<div class="tab-container">
+						<div class="tab-navigation">              
+							<ul><!-- id="select-box"-->
+								<li>
+									<a href="javascript:;" class="custom-tooltip" data-name="Change view"><span class="icon ion-grid"></span> <span class="caret"></span></a>
+									<div class="tabs">
+										<small>View as</small>
+										<ul>
+											<li><a href="javascript:;" id="grid"><span>Grid</span> <span class="icon ion-grid"></span></a></li>
+											<li ><a href="javascript:;" id="list" class="current"><span>List</span> <span class="icon ion-navicon"></span></a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- <div class="">
+							<div class="data_view">
+								<div class="grid">
+									<div class="title-box">
+										<h4>Name <span class="mdi mdi-arrow-up"></span></h4>
+									</div>
+									<div class="no-record">
+										<h4>No Record Found</h4>
+									</div>
+								</div>
+							</div>
+						</div> -->
+						<div class="data_view">
+							<div class="table-wrapper responsive">
+								<table class="table">
+									<thead>
+										<tr>
+											<th>Name <i class="icon ion-arrow-up-c"></i></th>
+											<th>Modified <i class="icon ion-arrow-up-c"></i></th>
+											<th>Date <i class="icon ion-arrow-down-c"></i></th>
+											<th style="width:40px"></th>
+										</tr>
+									</thead>
+									<!-- <tbody>											
+										<tr>
+											<td><a href="javascript:;"><img src="images/pdf-f.png">Lorem Ipsum<br> <span class="label">Office</span></a></td>
+											<td class="hide"><a href="javascript:;">1 min ago</a></td>
+											<td class="time"><a href="javascript:;">28 April, 2019</a></td>
+											<td class="action"><a href="javascript:;"><span class="mdi mdi-dots-vertical"></span></a>
+												<div class="action-data">
+													<ul>
+														<li><a href="javascript:;">View</a></li>
+														<li><a href="javascript:;">Download</a></li>
+														<li><a href="javascript:;">Delete</a></li>
+														<li><a href="javascript:;"  onclick="common_popup('.move-folder')">Move to folder</a></li>
+													</ul>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td><a href="javascript:;"><img src="images/pdf-f.png">Lorem Ipsum</a></td>
+											<td class="hide"><a href="javascript:;">1 min ago</a></td>
+											<td class="time"><a href="javascript:;">28 April, 2019</a></td>
+											<td class="action"><a href="javascript:;"><span class="mdi mdi-dots-vertical"></span></a>
+												<div class="action-data">
+													<ul>
+														<li><a href="javascript:;">View</a></li>
+														<li><a href="javascript:;">Download</a></li>
+														<li><a href="javascript:;">Delete</a></li>
+														<li><a href="javascript:;" onclick="common_popup('.move-folder')">Move to folder</a></li>
+													</ul>
+												</div>
+											</td>
+										</tr>
+									</tbody> -->
+								</table>
+								<div class="no-record">
+									<img src="images/binoculars.svg">
+									<h4>No Record Found</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+
+	<!-- modal box -->
+		<div class="modal-window-wrapper ">  
+
+		<!-- move-folder-->
+		    <div class="modal-window small move-folder">
+		      <div class="title">
+		        <h2>Move File</h2>
+		      </div>
+		      <a onclick="close_pop();" href="javascript:;" class="popup-close"></a>
+		      <div class="popup-form-outer">
+		      		<div class="folder">
+		      			<a href="javascript:;"><img src="images/folder.svg"> Untitled Folder<a>
+		      			<a href="javascript:;"><img src="images/folder.svg">Lorem Ipsum<a>
+		      		</div>
+		        <div class="submit-wrap">
+		          <a href="javascript:void(0)" class="common-btn">Move</a>
+		          <a href="javascript:void(0)" class="common-btn unfill" onclick="close_pop();">Cancel</a>
+		        </div>  
+		        <div class="clear"></div>       
+		      </div>
+		    </div>
+		    <!-- uploaded file-->
+		    <div class="modal-window lg uploaded-file">
+		      <div class="title">
+		        <h2>Uploaded File</h2>
+		      </div>
+		      <a onclick="close_pop();" href="javascript:;" class="popup-close"></a>
+		      <div class="popup-form-outer">
+			      	<div class="system-file">
+			      		<div class="left-section">
+			      			<div class="file-preview">
+			      				<div class="fileimg">
+
+			      				</div>
+			      				<p id="filename"></p>
+			      			</div>
+			      		</div>
+			      		<div class="right-section">
+			      			<ul>
+			      				<li><a href="editor_upload.html" class="self-user">I need to sign</a></li>
+			      				<li><a href="editor_upload.html" class="other-user">I need to get signature from other people</a></li>
+			      			</ul>
+			      		</div>
+			      		<div class="clear"></div>
+			      	</div>		         
+		        <div class="clear"></div>       
+		      </div>
+		    </div>	
+		</div>
+
+
+	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="js/custom.js"></script>
+
+	<script>
+		$('.action a').click(function(){
+			$('.tab-navigation li .tabs').removeClass('show');
+			$('.action-data').removeClass('show');
+			$(this).parent('.action').find('.action-data').addClass('show');
+		});
+
+		$(document).click(function(){
+			$('.action-data').removeClass('show');
+		});
+		$('.action a').click(function(e){
+			    e.stopPropagation();
+			});
+
+
+		$('.common-section.add-icon').click(function(){
+			$(this).toggleClass('rotate');
+		});
+		$(document).click(function(){
+			$('.common-section.add-icon').removeClass('rotate');
+		});
+		$('.upload-folders').click(function(e){
+			    e.stopPropagation();
+			});
+		$('.common-section.add-icon').click(function(e){
+			    e.stopPropagation();
+			});
+
+
+		$(document).ready(function(){
+		       $('#file-up').change(function(e){
+		           var fileName = e.target.files[0].name;
+		           //$(this).parents('.upload-doc').addClass('hide');
+		           file_extantion = $("#file-up").val().split('.').pop();
+		           $('.fileimg').addClass(file_extantion);
+		           $('#filename').text(fileName);
+		           common_popup('.uploaded-file');
+		       });
+		   });
+
+
+		$('#grid').click(function(){
+			$('.data_view').addClass('grid-view');
+			$('#list').removeClass('active');
+			$(this).addClass('active');
+		});
+		$('#list').click(function(){
+			$(this).addClass('active');
+			$('#grid').removeClass('active');
+			$('.data_view').removeClass('grid-view');
+		});
+	</script>
+
+	</body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>LockSign</title>
+		<meta name=viewport content="width=device-width, initial-scale=1, user-scalable=no">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+
+		<link rel="shortcut icon" type="image/ico" href="images/favicon.png" />
+		<!-- css -->
+		<link rel="stylesheet" href="css/icon.css">
+		<link rel="stylesheet" href="css/jquery-ui.css">
+		<link rel="stylesheet" href="css/croppie.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css">		
+		<link rel="stylesheet" type="text/css" href="css/dashboard.css">
+		<!-- jquery script -->
+	    <script src="js/jquery-3.3.1.min.js"></script>
+	</head>
+	<body>	
+		<div class="wrapper">
+			<div class="left-panel scroll_custom">
+				<div class="image-panel">
+					<div class="close-icon">
+						<a href="javascript:;"><img src="images/cross1.svg"></a>
+					</div>
+					<a href="profile.html">
+						<div class="image-box">
+							<img src="images/thumbnail.png">
+						</div>
+						<p>John Appleased</p>
+					</a>
+				</div>
+				<div class="navbar">
+					<ul>
+						<li>
+							<a href="javascript:;" class="title">
+								<div class="nav-icon home"></div>
+								<div class="nav-title">Home <i class="icon ion-chevron-down"></i></div>	
+							</a>
+							<div class="drop-wrap">
+								<ul>
+									<li><a href="dashboard.html">Recent</a></li>
+									<li><a href="important.html">Important</a></li>
+									<li><a href="offline.html">Offline</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="javascript:;" class="title">
+								<div class="nav-icon document" class="title"></div>
+								<div class="nav-title">Documents <i class="icon ion-chevron-down"></i></div>
+							</a>
+							<div class="drop-wrap">
+								<ul>
+									<li class="current"><a href="signature.html">Needs for Signature</a></li>
+									<li><a href="waiting-others.html">Waiting for others</a></li>
+									<li><a href="completed.html">Completed</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="profile.html">
+								<div class="nav-icon account"></div>
+								<div class="nav-title">My Account</div>
+							</a>
+						</li>
+						<li class="current"><a href="settings.html">
+								<div class="nav-icon setting"></div>
+								<div class="nav-title">Settings</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="foot">
+					<div class="logo">
+						<a href="javascript:;">
+							<img src="images/logo.png" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="right-panel settings">
+				<div class="header setting">					
+					<div class="left-section">
+						<div class="nav-toggle">
+		                    <a id="menu_toggle" class="">
+		                        <i class="icon bars"></i>
+		                        <i class="icon bars"></i>
+		                        <i class="icon bars"></i>
+		                    </a>
+		                </div>
+						<div class="page-title">
+							<img src="images/settings.svg"> Settings
+						</div>
+					</div>
+					<div class="right-section">
+						<!-- <div class="common-section search">
+							<input type="text" placeholder="Search">
+							<input type="submit" value="" class="search">
+						</div>
+						 <div class="common-section calender">
+							<a href="javascript:;"><img src="images/calander.png" alt=""></a>
+						</div>
+						<div class="common-section folder">
+							<a href="javascript:;"><img src="images/folder.png" alt=""></a>
+						</div>  -->
+						<div class="common-section">
+							<a href="help_old.html" class="custom-tooltip" data-name="Help"><img src="images/help.png" alt=""></a>
+						</div>
+						<div class="common-section">
+							<a href="login.html" class="custom-tooltip" data-name="Logout"><img src="images/logout.png" alt=""></a>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="main_section">
+					<form class="form">
+						<div class="form-element">
+							<div class="left-side pic">
+								<label>Change Photo</label>
+							</div>
+							<div class="right-side">
+								<ul class="priview_image">
+									<img src="images/user-pic.png" alt="">
+								</ul>
+								<a href="javascript:;" class="edit" onclick="common_popup('.edit-pic')">Edit</a>
+							</div>
+						</div>
+						<div class="form-element">
+							<div class="left-side">
+								<label>Change Name</label>
+							</div>
+							<div class="right-side">
+								<p>John Appleased</p>
+								<a href="javascript:;" class="edit" onclick="common_popup('.edit-name')">Edit</a>
+							</div>
+						</div>
+						<div class="form-element">
+							<div class="left-side">
+								<label>Change Email</label>
+							</div>
+							<div class="right-side">
+								<p>johnappleased@locksign.co</p>
+								<a href="javascript:;" class="edit" onclick="common_popup('.edit-email')">Edit</a>
+							</div>
+						</div>
+						<div class="form-element">
+							<div class="left-side">
+								<label>Change Password</label>
+								<span>Set a unique password to protect your personal Dropbox account.</span>
+							</div>
+							<div class="right-side">
+								<a href="javascript:;" class="custom-btn" onclick="common_popup('.edit-password')">Change Now</a>
+							</div>
+						</div>
+						<div class="form-element">
+							<div class="left-side">
+								<label>Add Phone number</label>
+							</div>
+							
+							<div class="right-side">
+								<a href="javascript:;" class="custom-btn" onclick="common_popup('.edit-phone')">Add Now</a>
+							</div>
+						</div>
+					</form>	
+					<a href="javascript:;" class="remove" onclick="common_popup('.delete')">Delete my account</a>
+				</div>
+				<div class="footer">
+					<ul>
+						<li><a href="javascript:;" class="remove">Term and condition & Privacy policy</a></li>
+						<li><a href="javascript:;" class="remove">About us</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!-- modal box -->
+		<div class="modal-window-wrapper ">  
+
+			<!-- edit pic-->
+		    <div class="modal-window small edit-pic">
+		      <div class="title">
+		        <h2>Change Photo</h2>
+		      </div>
+		      <a onclick="close_pop();" href="javascript:;" class="popup-close"></a>
+		      <div class="popup-form-outer">
+		      	<div class="form">
+		      		<div class="form-element">
+		      			<div class="file-cover">
+                          	<div class="file-placeholder upload-img single-img">
+                          		<img src="images/upload.png">
+                            	<p>Drag or drop form your computer </p>
+                          	</div>  
+                         	<input type="file" id="upload" class="upload-photo upload" accept="image/*">
+                         	<!-- <ul class="priview_image">
+                                
+                            </ul> -->
+                       	</div>
+		      		</div>
+		      	</div>
+		        <!-- <div class="submit-wrap">
+		          <a href="javascript:void(0)" class="common-btn">Save</a>
+		        </div> -->         
+		      </div>
+		    </div>
+
+
+		  <!-- edit name-->
+		    <div class="modal-window small edit-name">
+		      <div class="title">
+		        <h2>Change Name</h2>
+		      </div>
+		      <a onclick="close_pop();" href="javascript:;" class="popup-close"></a>
+		      <div class="popup-form-outer">
+		      	<div class="form">
+		      		<div class="form-element">
+		      			<input type="text" placeholder="First Name">
+		      		</div>
+		      		<div class="form-element">
+		      			<input type="text" placeholder="Last Name">
+		      		</div>
+		      	</div>
+		        <div class="submit-wrap">
+		          <a href="javascript:void(0)" class="common-btn">Save</a>		          
+		        </div> 
+		        <div class="clear"></div>        
+		      </div>
+		    </div>
+
+		    <!-- edit email-->
+		    <div class="modal-window small edit-email">
+		      <div class="title">
+		        <h2>Change Email</h2>
+		      </div>
+		      <a onclick="close_pop();" href="javascript:;" class="popup-close"></a>
+		      <div class="popup-form-outer">
+		      	<div class="form">
+		      		<div class="form-element">
+		      			<input type="email" placeholder="johnappleased@locksign.co">
+		      		</div>
+		      	</div>
+		        <div class="submit-wrap">
+		          <a href="javascript:void(0)" class="common-btn">Save</a>
+		        </div>         
+		        <div class="clear"></div>
+		      </div>
+		    </div>
+
+		     <!-- edit password-->
+		    <div class="modal-window small edit-password">
+		      <div class="title">
+		        <h2>Change Password</h2>
+		      </div>
+		      <a onclick="close_pop();" href="javascript:;" class="popup-close"></a>
+		      <div class="popup-form-outer">
+		      	<div class="form">
+		      		<div class="form-element">
+		      			<input type="password" placeholder="Old Password">
+		      		</div>
+		      		<div class="form-element">
+		      			<input type="password" placeholder="New Password">
+		      		</div>
+		      		<div class="form-element">
+		      			<input type="password" placeholder="Confirm Password">
+		      		</div>
+		      	</div>
+		        <div class="submit-wrap">
+		          <a href="javascript:void(0)" class="common-btn">Save</a>
+		        </div>
+		        <div class="clear"></div>         
+		      </div>
+		    </div>	
+
+		    <!-- edit phone-->
+		    <div class="modal-window small edit-phone">
+		      <div class="title">
+		        <h2>Add Phone Number</h2>
+		      </div>
+		      <a onclick="close_pop();" href="javascript:;" class="popup-close"></a>
+		      <div class="popup-form-outer">
+		      	<div class="form">
+		      		<div class="form-element">
+		      			<input type="text" placeholder="+91-1234567890" onkeypress="return isNumberKey(event)">
+		      		</div>
+		      	</div>
+		        <div class="submit-wrap">
+		          <a href="javascript:void(0)" class="common-btn">Save</a>
+		        </div>
+		        <div class="clear"></div>         
+		      </div>
+		    </div>	
+
+		    <!-- delete Account-->
+		    <div class="modal-window small delete">
+		      <div class="title">
+		        <h2>Delete Account</h2>
+		      </div>
+		      <a onclick="close_pop();" href="javascript:;" class="popup-close"></a>
+		      <div class="popup-form-outer">
+		      			<p>Are you sure, you want to Delete Account?</p>
+		        <div class="submit-wrap">
+		          <a href="javascript:void(0)" class="common-btn" onclick="close_pop();">No</a>
+		          <a href="javascript:void(0)" class="common-btn unfill">Yes</a>
+		        </div>  
+		        <div class="clear"></div>       
+		      </div>
+		    </div>	
+		</div>
+
+
+<div class="cropper-wrapper small">
+    <div class="cropper-overlay"></div>
+    <div class="cropper-window">
+        <div class="demo-wrap upload-demo">
+            <div class="col-1-2">
+                <div class="upload-msg">
+                    Upload a file to start cropping
+                </div>
+                <div class="upload-demo-wrap">
+                    <div id="upload-demo"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="modal-footer">
+            <!-- <div class="row">  
+               <div class="btn-space"> <a href="javascript:;" class="common-btn submit upload-result">Apply<span></span></a></div>
+                <div class="btn-space"><a href="javascript:void(0)" class="common-btn submit-clear  unfill cancel_cp">Cancel<span></span></a></div>
+                <div class="clear"></div>
+            </div> -->
+            <div class="submit-wrap">
+	          <a href="javascript:void(0)" class="common-btn cancel_cp">No</a>
+	          <a href="javascript:void(0)" class="common-btn unfill upload-result" onclick="close_pop();">Yes</a>
+	        </div>  
+	        <div class="clear"></div>
+        </div>
+    </div>
+</div>
+
+
+<!--	<script src="js/jquery-ui.js"></script>-->
+	<script src="js/croppie-min.js"></script>
+	<script src="js/fixed-croppie.js"></script>
+	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="js/custom.js"></script>
+
+	<script type="text/javascript">
+		function isNumberKey(evt){
+			var charCode = (evt.which) ? evt.which : event.keyCode
+			if (charCode > 31 && (charCode < 48 || charCode > 57))
+			return false;
+		} 
+		$(document).ready(function(){
+	        /*croppie*/
+	        Demo.init();
+	      });
+
+		$('input[type="file"]').click(function(){
+			$('input[type="file"]').val(''); 
+		});
+
+	</script>
+	</body>
+</html>

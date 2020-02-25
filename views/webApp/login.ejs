@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html> 
+<head>
+<!-- Basic Page Needs ============== -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Locksign</title>
+
+    <!-- Mobile Specific Metas ============== -->
+    <meta name=viewport content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+     
+    <!-- favicon ============== -->
+   <link rel="shortcut icon" type="image/ico" href="/../images/webApp/favicon-16x16.png" /> 
+
+    <!-- CSS ============== -->
+    <!--link rel="stylesheet" type="text/css" href="../css/croppie.css" /-->
+    <link rel="stylesheet" type="text/css" href="/../stylesheets/webApp/swiper.min.css" /> 
+    <link rel="stylesheet" type="text/css" href="/../stylesheets/webApp/common.css" /> 
+    <link rel="stylesheet" type="text/css" href="/../stylesheets/webApp/login.css" /> 
+    <!-- js ============== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+
+</head>
+    <body class="outer-page">
+        <div class="wrapper">
+            <!--header start-->
+            <div class="header">
+                <div class="container">
+                    <div class="logo"><a href="index.html"><img src="/../images/webApp/logo.png" alt=""></a></div>
+                </div>    
+            </div>    
+            <!--header end-->
+            <div class="body-section">
+                <div class="container">
+                    <div class="wrapper_bx">
+                        <div class="form_wrapper">
+
+                            <!--login-->
+                            <div class="login common-wh">
+                                <h2>Welcome <span>Back :)</span></h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                  Quisque magna ipsum, </p>
+                                <div class="form" >
+                                <div class="form-element">
+                                    <label>Email</label>
+                                    <input type="email" name="" placeholder="Email address" id="email">   
+                                    <div class="error" id="emailError">Enter</div> 
+                                </div>
+                                <div class="form-element">
+                                    <label>Password</label>
+                                    <input type="email" name="" placeholder="Password (min. 6 Characters)" id="password">   
+                                    <div class="error" id="passwordError">Enter</div>
+                                </div>
+                                <div class="forgot-psd">Forgot Password?</div>
+                                <div class="conditions_ag">
+                                    <label class="checkbox leftlabel"><input type="checkbox" id="rememberMe"><i class="input-helper"></i>Remember me</label>
+                                </div>
+                                <div class="form-element submit">
+                                    <input type="submit" name="" value="Login" onclick="signIn();">   
+                                </div>
+                                </div>
+                                <div class="tag_line">Or you can join with</div>
+                                <div class="login_social">
+                                    <ul>
+                                    <li><a href="" class="social_icon facebook"></a></li>
+                                    <li><a href="" class="social_icon linkdn"></a></li>
+                                    <li><a href="" class="social_icon google_plus"></a></li>
+                                    </ul>
+                                </div>
+                                 <div class="account">Create a account? <a href="singup.html" >Sign Up</a> </div>
+                            </div>
+                            <!--login end-->
+                            <!--Forgot Password-->
+                            <div class="forgot common-wh">
+                                <h2>Forgot <span>Password :/</span></h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </p>
+                                <form class="form">
+                                <div class="form-element">
+                                    <label>Email</label>
+                                    <input type="email" name="" placeholder="Email address">   
+                                    <div class="error">Enter</div> 
+                                </div>
+
+                                <div class="form-element submit">
+                                    <input type="submit" name="" value="ReSet Password">   
+                                </div>                                                                                    
+                                </form>
+
+                                 <div class="account">Back to  <a href="javascript:;" id="back_login" >Log In</a> </div>
+                            </div> 
+
+                            <!--Forgot Password end-->
+                        </div>
+                        <div class="form_slider">
+                            <div class="slider_bx">
+                                <div class="image-box"><img src="/../images/webApp/icon-signup.png" alt=""></div>
+                            
+                                     <div class="swiper-container">
+                                        <ul class="swiper-wrapper">
+                                            <li class="swiper-slide">
+                                                <span>Signature Protection</span>
+                                                <p>Conventional signatures can be easily forged. So we help you encrypt your signatures with a <i>QR Code</i></p>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <span>Signature Protection</span>
+                                                <p>Conventional signatures can be easily forged. So we help you encrypt your signatures with a <i>QR Code</i></p>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <span>Signature Protection</span>
+                                                <p>Conventional signatures can be easily forged. So we help you encrypt your signatures with a <i>QR Code</i></p>
+                                            </li>                                                                                        
+
+                                        </ul>
+                                        <!-- Add Pagination -->
+                                        <div class="swiper-pagination"></div>
+                                    </div>                                
+                            </div>    
+                        </div>
+                    </div>    
+                </div>  
+            </div>    
+        </div>
+    </body>
+</html>
+<!--pop up section-->
+<div class="modal-window-wrapper ">   
+    <div class="modal-window email_popup">
+        <a onclick="close_pop();" href="javascript:;" class="popup-close"></a>
+        <div class="email_wrapper">
+            <div class="overlay-curve half-part"></div>
+            <div class="overlay-email"></div>
+            <div class="email_panel_lf">
+                <h3>Verification link sent!</h3>
+                <p>We emailed a confirmation link to <a href="javascript:;">email@locksign.co</a>  Check your email for a link to login in and create profile</p>
+                <span>Didn’t get a confirmation email?</span>
+                <a href="" class="resend">Resend Email Again</a>
+                <a href="" class="btn">Check Verification Status</a>
+            </div>
+        </div>
+    </div>
+</div>    
+<!--pop up section end-->
+
+<!--js files-->
+
+<script src="/../javascripts/webApp/swiper.min.js"></script>
+<script src="/../javascripts/webApp/home.js"></script>
+
+<!--swiper slider login page-->
+<script type="text/javascript">
+var baseUrl = '<%=baseUrl%>'
+var emailRegex=(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+var swiper = new Swiper('.swiper-container', {
+    pagination: '.swiper-pagination',
+    slidesPerView: 'auto',
+    autoplay: 4000,
+    paginationClickable: true,
+    spaceBetween: 0
+}); 
+
+function signIn() {
+    $('.error').html('');
+    var email = $.trim($('#email').val());
+    var password = $('#password').val(); 
+    var rememberMe = 0; 
+    if (email ==""){
+        $('.error').show()
+        $('#emailError').html('Email is required.')
+    }else if(!emailRegex.test(email)){
+        $('.error').show()
+        $('#emailError').html("Please enter valid email.");
+        return false;
+    }else if (password ==""){
+        $('.error').show()
+        $('#passwordError').html("Password is required.");
+        return false;
+    } else if(password.length < 8){
+        $('.error').show()
+       $('#passwordError').html("Password must be greater than or equal to 8 characters");
+        return false;
+     } else if(password.length > 30){
+        $('.error').show()
+        $('#passwordError').html("Password should not be greater than 30 characters");
+        return false;
+    }else{
+        if(document.getElementById('rememberMe').checked) {
+            rememberMe = 1;
+        }
+        var $url = baseUrl+'webApp/signIn';
+        $.post($url, {email: email, password: password, rememberMe: rememberMe}, function(data){
+            // console.log(data);
+            // if(data.statusCode == 200){
+            //     if(data.account_status == 0){
+            //         location.href = base_url+'saloon/accountStatus';
+            //     }else if(data.account_status == -1){
+            //         location.href = base_url+'saloon/accountDeclined';
+            //     }
+            //     else{   
+            //         location.href = base_url+'saloon/dashboard';
+            //     }
+            // }
+            // else if(data.statusCode == 400 || data.statusCode == 401){
+            //     errorAlertShow(data.customMessage);
+            // }
+        });
+    }    
+}  
+</script>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="184" height="62" viewBox="0 0 184 62">
+  <g id="apple_svg" data-name="apple svg" transform="translate(-246 -3811)">
+    <rect id="Rectangle_3" data-name="Rectangle 3" width="184" height="62" rx="5" transform="translate(246 3811)"/>
+    <g id="apple" transform="translate(235.06 3822.16)">
+      <path id="XMLID_229_" d="M29.429,77.127c-3.114,5.4-1.135,13.606,2.31,18.579,1.719,2.486,3.46,4.718,5.844,4.718l.136,0A7.216,7.216,0,0,0,40.43,99.7a7.427,7.427,0,0,1,3.213-.762,6.984,6.984,0,0,1,3.058.737,6.479,6.479,0,0,0,2.929.7c2.685-.05,4.334-2.458,5.789-4.583a20.314,20.314,0,0,0,2.536-5.2l.01-.033a.3.3,0,0,0-.16-.37l-.022-.009a7.7,7.7,0,0,1-4.665-7.049,7.923,7.923,0,0,1,3.744-6.624l.029-.018a.3.3,0,0,0,.086-.424,8.714,8.714,0,0,0-6.853-3.722c-.195-.019-.4-.029-.6-.029a11.947,11.947,0,0,0-4.3,1.074,6.914,6.914,0,0,1-2.06.616,6.741,6.741,0,0,1-2.131-.623,10.328,10.328,0,0,0-3.756-.954h-.1A9.211,9.211,0,0,0,29.429,77.127Z" transform="translate(0 -63.585)" fill="snow"/>
+      <path id="XMLID_230_" d="M156.806,0a8.411,8.411,0,0,0-5.553,2.849,7.881,7.881,0,0,0-1.995,5.844.3.3,0,0,0,.276.261c.129.01.26.015.39.015a7.115,7.115,0,0,0,5.242-2.688A8.309,8.309,0,0,0,157.119.269.3.3,0,0,0,156.806,0Z" transform="translate(-106.679 0)" fill="snow"/>
+    </g>
+    <text id="Available_on_the" data-name="Available on the" transform="translate(306 3836)" fill="#fff" font-size="12" font-family="SFUIDisplay-Regular, SF UI Display" letter-spacing="0.07em"><tspan x="0" y="0">Available on the</tspan></text>
+    <text id="App_Store" data-name="App Store" transform="translate(306 3857)" fill="#fff" font-size="22" font-family="SFUIDisplay-Medium, SF UI Display" font-weight="500" letter-spacing="0.05em"><tspan x="0" y="0">App Store</tspan></text>
+  </g>
+</svg>
