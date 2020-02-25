@@ -13,6 +13,8 @@ var swagger  = require('swagger-express');
 var underscore = require('underscore');
 var http = require('http')
 
+
+
 var mysqlLib = require('./utils/db_connection')
 baseUrl = "http://localhost:3050/"
 s3Url   = "https://locksign-dev.s3.amazonaws.com/"
@@ -60,6 +62,11 @@ app.use(swagger.init(app, {
 
 var Router = require('./routes');
 app.use('/', Router);
+// Use the GoogleStrategy within Passport.
+//   Strategies in passport require a `verify` function, which accept
+//   credentials (in this case, a token, tokenSecret, and Google profile), and
+//   invoke a callback with a user object.
+
 
 app.use(function(req, res, next) {
     if (!req.user)
@@ -69,6 +76,7 @@ app.use(function(req, res, next) {
 // app.listen(3000, function(){  
 //   console.log("Express server listening on port 3000");
 // });
+
 app.set('port',config.app.port);
 var startServer = http.createServer(app).listen(app.get('port'), function () {
 	console.log("Server started at port "+config.app.port+"")

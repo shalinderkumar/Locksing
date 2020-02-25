@@ -1,7 +1,28 @@
 var express = require('express');
 var router = express.Router();
+var passport = require('passport');
+var GoogleStrategy = require('passport-google-oauth').OAuthStrategy;
+var User          = require('../models/users');
 
 /* WELCOME URL */
+
+router.get('/auth/google',
+    // passport.authenticate('google', { failureRedirect: '/login' }),
+    function(req, res) {
+    passport.use(new GoogleStrategy({
+        consumerKey: GOOGLE_CONSUMER_KEY,         //Here You need to put your GOOGLE_CONSUMER_KEY 
+        consumerSecret: GOOGLE_CONSUMER_SECRET,   // Here you need to put your GOOGLE_CONSUMER_SECRET
+        callbackURL: "http://www.example.com/auth/google/callback"
+      },
+      function(token, tokenSecret, profile, done) {
+          User.findOrCreate({ googleId: profile.id }, function (err, user) {
+            return done(err, user);
+          });
+      }
+    ));
+    res.redirect('/');
+});
+
 
 router.get('/', function (req, res) {
   res.render('index');
